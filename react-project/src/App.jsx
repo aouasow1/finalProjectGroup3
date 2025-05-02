@@ -1,9 +1,8 @@
 import {Route, Routes} from 'react-router-dom'
 import './App.css';
-import {Navbar} from './components/navbar';
-import {Home} from './components/pages/home';
-import {About} from './components/pages/about';
-import {Contact} from './components/pages/contact';
+import {Navbar, Footer} from './components/navbar';
+import {Home} from './components/pages/homes';
+import {Courses} from './components/pages/course';
 
 
 function App() {
@@ -13,9 +12,9 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path = '/' element={<Home/>} />
-      <Route path = '/about' element={<About/>} />
-      <Route path = '/contact' element={<Contact/>} />
+      <Route path = '/course' element={<Courses/>} />
     </Routes>
+    <Footer/>
   </div>
   )
 }

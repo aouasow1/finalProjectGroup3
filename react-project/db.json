@@ -1,0 +1,20 @@
+{
+  "courses": [
+    {
+      "id": "d957",
+      "name": "IT",
+      "description": "Networking",
+      "subjectArea": "Technology",
+      "credit": "4",
+      "createdAt": "2025-05-01"
+    },
+    {
+      "id": "4ec0",
+      "name": "SDV",
+      "description": "Mastering JavaScripts",
+      "subjectArea": "Web Development",
+      "credit": "3",
+      "createdAt": "2025-05-02"
+    }
+  ]
+}

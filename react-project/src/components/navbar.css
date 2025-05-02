@@ -12,7 +12,7 @@ nav {
 }
 
 nav .title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin: 0.5em;
@@ -38,4 +38,10 @@ nav ul li a {
 
 nav ul li a:not(.active):hover {
     background-color: rgb(245, 208, 106);
+}
+
+.footer{
+    text-align: center;
+    padding: 0.25em;
+    margin: 0.25em;
 }

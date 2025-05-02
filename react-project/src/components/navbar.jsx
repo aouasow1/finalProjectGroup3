@@ -7,12 +7,17 @@ export const Navbar = () => {
     return (
         <div>
             <nav>
-                <Link to='/' className='title'>Home</Link>
+                <li><Link to='/' className='title'>Home</Link></li>
                 <ul>
-                    <li><NavLink to='/about'>About Us</NavLink></li>
-                    <li><NavLink to='/contact'>Contact</NavLink></li>
+                    <li><NavLink to='/course' className="fs-3"> Courses</NavLink></li>
                 </ul>
             </nav>
         </div>
+    )
+}
+
+export const Footer = () => {
+    return (
+        <div className='footer'>&copy; copyright FinalProjetGroup3 </div>
     )
 }
