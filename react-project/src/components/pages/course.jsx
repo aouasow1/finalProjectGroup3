@@ -22,7 +22,7 @@ export const Courses = () => {
 function AllCourse(props) {
     const [courses, setCourses] = useState([]);
     function fetchCourses() {
-        fetch('http://aoua.sow1.github.io/finalProjectGroup3/courses')
+        fetch('http://aoua.sow1.github.io/finalProjectGroup3/db.json')
         .then((response) => {
             if(!response.ok) {
                 throw new Error('Unexpected Server Response');
@@ -40,7 +40,7 @@ function AllCourse(props) {
     useEffect(() => fetchCourses(), []);
 
     function deleteCourse(id) {
-        fetch('http://aoua.sow1.github.io/finalProjectGroup3/courses/' + id, {
+        fetch('http://aoua.sow1.github.io/finalProjectGroup3/db.json/' + id, {
             method: "DELETE"
         })
         .then((response) => response.json())
@@ -109,7 +109,7 @@ function CourseForm(props) {
 
         if(props.course.id) {
             //update course
-            fetch('http://aoua.sow1.github.io/finalProjectGroup3/courses/' + props.course.id, {
+            fetch('http://aoua.sow1.github.io/finalProjectGroup3/db.json/' + props.course.id, {
                 method : 'PATCH',
                 headers : {
                     'Content-Type' : 'application/json'
@@ -132,7 +132,7 @@ function CourseForm(props) {
         else{
         //create new course
         course.createdAt = new Date().toISOString().slice(0,10);
-        fetch('http://aoua.sow1.github.io/finalProjectGroup3/courses', {
+        fetch('http://aoua.sow1.github.io/finalProjectGroup3/db.json', {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
