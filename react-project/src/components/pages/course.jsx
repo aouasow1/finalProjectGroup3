@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import './course.css'
+
 
 export const Courses = () => {
     const [content, setContent] = useState(<AllCourse showForm={showForm}/>);

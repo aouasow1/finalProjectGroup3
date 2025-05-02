@@ -15,6 +15,14 @@
       "subjectArea": "Web Development",
       "credit": "3",
       "createdAt": "2025-05-02"
+    },
+    {
+      "id": "6dfc",
+      "name": "Python",
+      "description": "Mastering GUI",
+      "subjectArea": "Web Development",
+      "credit": "3",
+      "createdAt": "2025-05-02"
     }
   ]
 }
