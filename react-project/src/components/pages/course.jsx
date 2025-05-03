@@ -22,7 +22,7 @@ export const Courses = () => {
 function AllCourse(props) {
     const [courses, setCourses] = useState([]);
     function fetchCourses() {
-        fetch('https://aouasow1.github.io/api/db.json')
+        fetch('http://aouasow1.github.io/api/db.json')
         .then((response) => {
             if(!response.ok) {
                 throw new Error('Unexpected Server Response');
@@ -40,7 +40,7 @@ function AllCourse(props) {
     useEffect(() => fetchCourses(), []);
 
     function deleteCourse(id) {
-        fetch('https://aouasow1.github.io/api/db.json/' + id, {
+        fetch('http://aouasow1.github.io/api/db.json/' + id, {
             method: "DELETE"
         })
         .then((response) => response.json())
@@ -109,7 +109,7 @@ function CourseForm(props) {
 
         if(props.course.id) {
             //update course
-            fetch('https://aouasow1.github.io/api/db.json/' + props.course.id, {
+            fetch('https\://aouasow1.github.io/api/db.json/' + props.course.id, {
                 method : 'PATCH',
                 headers : {
                     'Content-Type' : 'application/json'
@@ -132,7 +132,7 @@ function CourseForm(props) {
         else{
         //create new course
         course.createdAt = new Date().toISOString().slice(0,10);
-        fetch('https://aouasow1.github.io/api/db.json', {
+        fetch('http://aouasow1.github.io/api/db.json', {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
